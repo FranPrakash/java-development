@@ -24,10 +24,10 @@ public class BasicCalculator {
         System.out.println("Please select an option"); // Receive an input string from user
         String option = myScanner.next(); // I am using the method myScanner.next() because next.line didnt work.
 
-        switch(option) {
+        switch(option) { // I am using switch statement to print out the result based on the user choice.
             case "A": //User selected addition option
                 System.out.println(firstNumber + " + " + secondNumber + " = " + (firstNumber + secondNumber));
-                break;
+                break; // Break makes the pc exit the switch block after print the output
             case "S": //User selected subtraction option
                 System.out.println(firstNumber + " - " + secondNumber + " = " + (firstNumber - secondNumber));
                 break;
@@ -38,6 +38,6 @@ public class BasicCalculator {
                 System.out.println(firstNumber + " / " + secondNumber + " = " + (firstNumber / secondNumber));
         }
 
-        myScanner.close();
+        myScanner.close(); // Closing the scanner
     }
 }
