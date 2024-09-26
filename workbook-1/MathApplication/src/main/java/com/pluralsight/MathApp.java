@@ -1,7 +1,5 @@
 package com.pluralsight;
 
-import com.sun.jdi.Value;
-
 public class MathApp {
     public static void main (String[] args) {
 //Question 1 :
