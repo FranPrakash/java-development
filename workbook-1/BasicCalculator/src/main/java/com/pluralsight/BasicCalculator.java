@@ -22,7 +22,7 @@ public class BasicCalculator {
         System.out.println("(D)ivide");
 
         System.out.println("Please select an option"); // Receive an input string from user
-        String option = myScanner.next(); // I am using the method myScanner.next() because next.line didnt work.
+        String option = myScanner.next(); // I am using the method myScanner.next() because next.line didnt work
 
         switch(option) { // I am using switch statement to print out the result based on the user choice.
             case "A": //User selected addition option
