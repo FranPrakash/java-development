@@ -18,8 +18,8 @@ public class SandwichShop2 {
 
         // Ask user choice for sandwich loaded
         System.out.println(" Would you like the Sandwich Loaded ? Yes or no ?");
-        //Accept user choice using myScanner object's NextBoolean method and store it in a bool variable.
-        boolean loadedSandwich = myScanner.nextBoolean();
+        //Accept user choice using myScanner object's Next method and store it in a String variable.
+        String loadedSandwich = myScanner.next(); // Declaring this variable as string
 
         // Telling user additional costs
         System.out.println("There is an additional cost for a loaded sandwich");
@@ -36,11 +36,13 @@ public class SandwichShop2 {
 
 
         //calculate the basePrice based on user Input
-        if (choice == 1) {
+        if (choice == 1) { // If user choose choice 1
             basePrice = 5.45f;
-            if (loadedSandwich) loadedPrice = 1.0f;
-            else basePrice = 8.95f;
-            if (loadedSandwich) loadedPrice = 1.75f;
+            if (loadedSandwich == "yes") loadedPrice = 1.0f; //User has selected loaded option
+        }
+        else { // user has selected choice 2
+            basePrice = 8.95f;
+            if (loadedSandwich == "yes") loadedPrice = 1.75f; // user has selected loaded option
         }
         //calculate the discount based on user Age Input
         byte discount; //declare the discount as a byte variable

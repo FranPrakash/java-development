@@ -2,7 +2,7 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-public class PayrollCalculator {
+public class PayrollCalculatorUpdated {
 
     public static void main(String[] args) {
 
@@ -20,12 +20,25 @@ public class PayrollCalculator {
 
         float payRate = myScanner.nextFloat();//User provides their pay rate and it is stored in a float variable
 
-        float grossPay = hours * payRate; // Using to calculate the gross pay // I will make it a method in the calculation updated
+        // Display the employee's name and their gross pay.
+        // float grossPay = hours * payRate; Using to calculate the gross pay
+        float grossPay = calculatePay(hours, payRate); // Calling a method to calculate gross pay.
 
-        System.out.println("Employee Name is: " + name);
+        System.out.println("Employee Name is: " + name); //
         System.out.println( "Gross Pay is: " + grossPay);
 
         myScanner.close();
     }
-    
+
+
+    // Create a method to calculate pay so that we can separate the calculation rules for grossPay.
+
+    public static float calculatePay (float hour, float payRate) {
+        // return type is float because the gross pay is float
+
+        float grossPay = hour * payRate;
+        return grossPay;
+
+    }
 }
+
