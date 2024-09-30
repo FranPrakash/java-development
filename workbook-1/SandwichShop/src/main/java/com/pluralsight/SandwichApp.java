@@ -29,7 +29,7 @@ public class SandwichApp {
             basePrice = 5.45f;
         else basePrice = 8.95f;
 
-        //calculate the discount based on user Age Input
+       //calculate the discount based on user Age Input
         byte discount; //declare the discount as a byte variable
 
 
