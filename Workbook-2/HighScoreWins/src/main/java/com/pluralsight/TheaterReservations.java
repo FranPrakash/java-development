@@ -21,20 +21,24 @@ public class TheaterReservations {
         System.out.println( "How many tickets would you like ? ");
         int howManyTickets = myScanner.nextInt();
 
-
+        //  check for invalid inputs . display error message if any values are missing
         if (fullName.isEmpty() || date.isEmpty() || howManyTickets == 0 ) {
             System.out.println(" Invalid options");
-        }  else {
-            // System.out.println( howManyTickets + " ticket(s) reserved for " + date + "under " + fullName); }
+        }  else { // inputs are not missing
+
+            //( howManyTickets + " ticket(s) reserved for " + date + "under " + fullName); }
+
+            //Start printing the output: number of tickets
             System.out.print(howManyTickets + " ticket");
 
             if (howManyTickets > 1) {
-                System.out.print("s");  // adding S in case that more than 1 ticket is selected
+                System.out.print("s");  // adding 's' in case that more than 1 ticket is selected
             }
 
             System.out.print(" reserved for ");
 
-            //declare a formatter object to parse date from string input
+            // Start converting date from string to LocalDate format
+
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
             // parse the date from string to localdate data type and store in a variable of localdate type
             LocalDate comingDate = LocalDate.parse(date, formatter);
@@ -42,6 +46,7 @@ public class TheaterReservations {
             System.out.print(comingDate + " under " );
 
             // split the full name using space as delimiter to get the parts of the name
+            //
             String[] nameParts = fullName.split(" ");
             String firstName = nameParts[0]; // first name is index at position 0
             String lastName;
