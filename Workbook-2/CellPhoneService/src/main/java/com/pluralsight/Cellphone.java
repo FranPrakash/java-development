@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class Cellphone {
+public class CellPhone {
 
 // Class data
 
@@ -13,13 +13,13 @@ public class Cellphone {
 
     // Constructor needs the same name as the class
     // the parenthesis are empty because it's a parameterless constructor
-   //this refers to the class
-    public Cellphone(){
-    this.serialNumber = 0;
-    this.model = "";
-    this.carrier = "";
-    this.phoneNumber = "";
-    this.owner = "";
+    //this refers to the class
+    public CellPhone(){
+        this.serialNumber = 0;
+        this.model = "";
+        this.carrier = "";
+        this.phoneNumber = "";
+        this.owner = "";
     }
 
 // Getter is a method that get the value of a variable from an object
@@ -40,25 +40,39 @@ public class Cellphone {
     public String getCarrier() {
         return this.carrier;
     }
-    public void setCarrier(String Carrier) {
+    public void setCarrier(String carrier) {
         this.carrier = carrier;
     }
-     public String getPhoneNumber() {
-         return this.phoneNumber;
-     }
-     public void setPhoneNumber(String phoneNumber) {
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-     public String getOwner() {
-         return this.owner;
-     }
-     public void setOwner(String owner) {
-          this.owner = owner;
-     }
+    public String getOwner() {
+        return this.owner;
+    }
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    //Step 1 exercise 2
+    // this method doest return anything just accept // specify in the parentheses what the method accepts
+    public void dial( String cellphoneNumber) {
+        System.out.println( this.owner + "'s phone is calling " + cellphoneNumber ); //this.owner is how I can access the variable.
+
+
+
+
+
+    }
+
 
 
 }
+
+
 
 
 
