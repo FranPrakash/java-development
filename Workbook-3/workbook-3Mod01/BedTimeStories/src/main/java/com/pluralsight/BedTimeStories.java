@@ -10,7 +10,7 @@ public class BedTimeStories {
 
 
   //String array store the name of the Bed time Stories
-String[] storyFiles = {"goldilocks.txt", "hansel_and_gretel.txt_mary_had_a_little_lamb.txt"};
+String[] storyFiles = {"goldilocks.txt","hansel_and_gretel.txt","mary_had_a_little_lamb.txt"};
 
 Scanner myScanner = new Scanner(System.in);
 
@@ -23,11 +23,12 @@ Scanner myScanner = new Scanner(System.in);
         int UserChoice = myScanner.nextInt();
 
         try {
-            FileInputStream fis = new FileInputStream("goldilocks.txt");
-            Scanner storyScanner = new Scanner(fis);
+            // creating a file input stream object
+            FileInputStream fis = new FileInputStream(storyFiles[UserChoice -1]); // The -1 converts the user choice (1,2 or 3) to positions in the array (0,1 aor 2).
+            Scanner storyScanner = new Scanner(fis); // passing the file input stream object to the scanner constructor
+
             while (storyScanner.hasNextLine()) {
-                UserChoice = storyScanner.nextLine();
-            System.out.println(UserChoice);
+            System.out.println(storyScanner.nextLine());
         }
             storyScanner.close();
 
