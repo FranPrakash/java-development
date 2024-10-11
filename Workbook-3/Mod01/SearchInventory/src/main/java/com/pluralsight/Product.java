@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+
+
+// describing product
 public class Product {
 
     private int id;
