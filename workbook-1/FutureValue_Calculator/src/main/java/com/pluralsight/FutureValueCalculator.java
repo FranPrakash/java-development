@@ -19,7 +19,7 @@ public class FutureValueCalculator {
         System.out.println("Please provide the number of Years : ");
         double numberOfYears = myScanner.nextDouble();
 
-        // Calculations. Set the compounding frequency per year, formula says  compounded daily, so n = 365
+        // Calculations. Set the compounding frequency per year, formula says compounded daily, so n = 365
         int n = 365;
 
         double r = interestRate / 100; // Calculate rate in decimal. R is the rate or annual interest rate expressed as a decimal.
