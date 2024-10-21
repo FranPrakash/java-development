@@ -2,24 +2,24 @@ package com.pluralsight;
 
 public class Room {
 
+
     private int numberOfBeds;
     private Float price;
-    private Boolean isOccupied;
-    private Boolean isDirty;
-    //No need for variable is available cause by knowing that a room is occupied or dirty its understandable it's not available
+    private Boolean Occupied;
+    private Boolean Dirty;
+    //is available variable  No need for variable is available cause by knowing that a room is occupied or dirty its understandable it's not available
 
     //Constructor
     public Room(Boolean isDirty, Boolean isOccupied, int numberOfBeds, Float price) {
-        this.isDirty = isDirty;
-        this.isOccupied = isOccupied;
+        this.Dirty = isDirty;
+        this.Occupied = isOccupied;
         this.numberOfBeds = numberOfBeds;
         this.price = price;
     }
 
     //Getter and setters
-
     public Boolean isAvailable() {
-        if (!isOccupied && !isDirty) { //If the room is not occupied and not dirty its available
+        if (!Occupied && !Dirty) { //If the room is not occupied and not dirty its available
             return true; //Its available
         } else {
             return false;
@@ -27,11 +27,11 @@ public class Room {
     } //Set is not need because the variable doest exit
 
     public Boolean isDirty() {
-        return isDirty;
+        return Dirty;
     }
 
     public void setDirty(Boolean dirty) {
-        isDirty = dirty;
+        Dirty = dirty;
     }
 
     public int getNumberOfBeds() {
@@ -43,11 +43,11 @@ public class Room {
     }
 
     public Boolean isOccupied() {
-        return isOccupied;
+        return Occupied;
     }
 
     public void setOccupied(Boolean occupied) {
-        isOccupied = occupied;
+        Occupied = occupied;
     }
 
     public Float getPrice() {

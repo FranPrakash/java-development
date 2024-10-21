@@ -8,6 +8,15 @@ public class Employee {
     private float payRate;
     private float hoursWorked;
 
+
+    public Employee(String department, int employeeID, float hoursWorked, String name, float payRate) {
+        this.department = department;
+        this.employeeID = employeeID;
+        this.hoursWorked = hoursWorked;
+        this.name = name;
+        this.payRate = payRate;
+    }
+
     //Getters
     public String getDepartment() {
         return department;
