@@ -5,21 +5,21 @@ public class Room {
 
     private int numberOfBeds;
     private Float price;
-    private Boolean Occupied;
-    private Boolean Dirty;
+    private Boolean occupied;
+    private Boolean dirty;
     //is available variable  No need for variable is available cause by knowing that a room is occupied or dirty its understandable it's not available
 
     //Constructor
     public Room(Boolean isDirty, Boolean isOccupied, int numberOfBeds, Float price) {
-        this.Dirty = isDirty;
-        this.Occupied = isOccupied;
+        this.dirty = isDirty;
+        this.occupied = isOccupied;
         this.numberOfBeds = numberOfBeds;
         this.price = price;
     }
 
     //Getter and setters
     public Boolean isAvailable() {
-        if (!Occupied && !Dirty) { //If the room is not occupied and not dirty its available
+        if (!occupied && !dirty) { //If the room is not occupied and not dirty its available
             return true; //Its available
         } else {
             return false;
@@ -27,11 +27,11 @@ public class Room {
     } //Set is not need because the variable doest exit
 
     public Boolean isDirty() {
-        return Dirty;
+        return dirty;
     }
 
     public void setDirty(Boolean dirty) {
-        Dirty = dirty;
+        this.dirty = dirty;
     }
 
     public int getNumberOfBeds() {
@@ -43,11 +43,11 @@ public class Room {
     }
 
     public Boolean isOccupied() {
-        return Occupied;
+        return occupied;
     }
 
     public void setOccupied(Boolean occupied) {
-        Occupied = occupied;
+        this.occupied = occupied;
     }
 
     public Float getPrice() {
@@ -57,4 +57,23 @@ public class Room {
     public void setPrice(Float price) {
         this.price = price;
     }
+
+    //Exercise 2
+
+    public void checkIn(){
+        this.occupied = true; //Initializing the variable to true
+        this.dirty = true;
+
+    }
+
+    public void checkOut(){
+        this.cleanRoom(); // When guest check out cleanRoom method is going to be called
+
+    }
+
+    public void cleanRoom(){
+
+    }
+
+
 }

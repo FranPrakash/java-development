@@ -9,9 +9,11 @@ public class Main {
         // Calling the constructor and creating an object , passing the parameters
         Room myRoom = new Room(true, true, 2, 120.0f);
         Room myRoom2 = new Room(false, false, 1, 120.0f);
+        Room myRoom3 = new Room(true, true,2,15f);
 
         System.out.println("Is the room available " + myRoom.isAvailable());
         System.out.println("Is the room available " + myRoom2.isAvailable());
+        System.out.println("Is the room available " + myRoom3.getPrice());
 
         Reservation myReservation = new Reservation(false, 2, "king");
         System.out.println(myReservation.getReservationTotal());
@@ -21,6 +23,7 @@ public class Main {
         System.out.println(myEmployee.getRegularHours());
         System.out.println(myEmployee.getOvertimeHours());
         System.out.println(myEmployee.getTotalPay());
+
 
 
 
