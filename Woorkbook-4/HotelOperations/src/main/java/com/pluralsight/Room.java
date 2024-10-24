@@ -60,19 +60,22 @@ public class Room {
 
     //Exercise 2
 
-    public void checkIn(){
+    public boolean checkIn(){
         this.occupied = true; //Initializing the variable to true
         this.dirty = true;
+        return true;
 
     }
 
-    public void checkOut(){
+    public boolean checkOut(){
         this.cleanRoom(); // When guest check out cleanRoom method is going to be called
-
+        this.occupied = false;// testing
+        return true;
     }
 
-    public void cleanRoom(){
-
+    public boolean cleanRoom(){
+        this.dirty = false;
+        return true;
     }
 
 
