@@ -15,7 +15,7 @@ public class NameFormatter {
     public static String format(String prefix, String firstName, String middleName, String lastName, String suffix) {
         return lastName + ", " + prefix + " " + firstName + " " + middleName + ", " + suffix;
     }
-
+//Maaike help
     public static String format(String fullName) {
         String[] nameParts = fullName.split(" ");//split using space as delimiter. To extract ech part of the name
         if (nameParts.length == 2) {
