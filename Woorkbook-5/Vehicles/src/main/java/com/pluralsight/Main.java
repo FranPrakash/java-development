@@ -1,28 +1,28 @@
 package com.pluralsight;
 
-public class Main extends Vehicle {
+public class Main {
+
+    //SuperConstructor
 
     public static void main(String[] args) {
 
         //instance vehicle types
-        Moped slowRide = new Moped();
+        Moped slowRide = new Moped(2,"Red",5,1,2);
         slowRide.setColor("Red");
         slowRide.setFuelCapacity(5);
 
-        Car mycar = new Car();
+        Car mycar = new Car(2, "White", 2, 3,0);
         mycar.setColor("Yellow");
-        mycar.setNumberOfSeats(5);
-        mycar.setMaxSpeed(120f);
 
-        Hovercraft myHovercraft = new Hovercraft();
+
+        Hovercraft myHovercraft = new Hovercraft(10,"Pink",3, 6,false);
         myHovercraft.setColor("White");
         myHovercraft.setFuelCapacity(10);
         myHovercraft.setNumberOfPassengers(3);
 
-        Semitruck mySemiTruck = new Semitruck();
+        Semitruck mySemiTruck = new Semitruck(5,"Green",2,5,"refrigerated");
         mySemiTruck.setColor("Pink");
-        mySemiTruck.setNumberOfSeats(5);
-        mySemiTruck.setMaxSpeed(150f);
+
 
         System.out.println("Car Color: " + mycar.getColor());
         System.out.println("Hovercraft Color :" + myHovercraft.getColor());
@@ -30,6 +30,5 @@ public class Main extends Vehicle {
         System.out.println("Moped color" + slowRide.getColor());
 
     }
-
 
 }

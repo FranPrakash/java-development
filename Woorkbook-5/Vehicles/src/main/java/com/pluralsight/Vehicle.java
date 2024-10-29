@@ -6,9 +6,16 @@ public class Vehicle {
     private int numberOfPassengers;
     private int cargoCapacity;
     private int fuelCapacity;
-    private int numberOfSeats;
-    private float maxSpeed;
 
+    //Constructor exercise 1 module 2
+    public Vehicle(int cargoCapacity, String color, int fuelCapacity, int numberOfPassengers ) {
+        this.cargoCapacity = cargoCapacity;
+        this.color = color;
+        this.fuelCapacity = fuelCapacity;
+        this.numberOfPassengers = numberOfPassengers;
+    }
+
+    //Getters and Setters
     public int getCargoCapacity() {
         return cargoCapacity;
     }
@@ -33,13 +40,6 @@ public class Vehicle {
         this.fuelCapacity = fuelCapacity;
     }
 
-    public float getMaxSpeed() {
-        return maxSpeed;
-    }
-
-    public void setMaxSpeed(float maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
 
     public int getNumberOfPassengers() {
         return numberOfPassengers;
@@ -49,11 +49,4 @@ public class Vehicle {
         this.numberOfPassengers = numberOfPassengers;
     }
 
-    public int getNumberOfSeats() {
-        return numberOfSeats;
-    }
-
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
-    }
 }
