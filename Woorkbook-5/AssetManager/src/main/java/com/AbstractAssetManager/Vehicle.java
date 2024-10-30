@@ -1,8 +1,8 @@
-package com.pluralsight;
+package com.AbstractAssetManager;
 
 import java.time.LocalDate;
 
-public class Vehicle extends Asset{
+public class Vehicle extends Asset {
 
    String makeModel;
    int year;
