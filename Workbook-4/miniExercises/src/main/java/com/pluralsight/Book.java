@@ -23,6 +23,9 @@ public class Book {
         System.out.println("Isbn: " + this.isbn);
         System.out.println("Price: " + this.price);
     }
+public
+
+
 
     }
 
