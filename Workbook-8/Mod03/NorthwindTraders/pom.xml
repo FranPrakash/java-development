@@ -20,7 +20,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
-
+        <!-- added DataSource Dependency  -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.12.0</version>
+            <!-- source for version https://commons.apache.org/proper/commons-dbcp/ -->
+        </dependency>
     </dependencies>
 
 </project>
